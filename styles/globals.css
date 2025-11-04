@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL support */
+:root {
+  --midad-blue: #015C76;
+  --midad-light: #eaf6ff;
+  --accent: #f6b042;
+}
+
+html, body, #__next {
+  height: 100%;
+  direction: rtl;
+  font-family: "Segoe UI", Roboto, "Noto Naskh Arabic", system-ui, -apple-system, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#fff 0%, #f7fbff 100%);
+  color: #015C76; /* 🔹 لون الخط العام */
+}
+
+/* small animation utilities */
+.fade-in { animation: fadeIn 450ms ease-out both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to { opacity:1; transform: translateY(0);} }
+
+.card-hover { transition: transform .18s ease, box-shadow .18s ease; }
+.card-hover:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(11,97,164,0.08); }
